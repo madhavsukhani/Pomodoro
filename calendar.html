@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/calendar-style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Calendar</title>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <div class="calendar">
+        <div class="month">
+          <i class="fa fa-angle-left prev"></i>
+          <div class="date">November 2022</div>
+          <i class="fa fa-angle-right next"></i>
+        </div>
+        <div class="weekdays">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <div class="days">
+      </div>
+      <div class="goto-today">
+        <div class="goto">
+          <input type="text" placeholder="mm/yyyy" class="date-input">
+          <button class="goto-btn">Go</button>
+        </div>
+        <button class="today-btn">Today</button>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <div class="today-date">
+      <div class="event-day">Wed</div>
+      <div class="event-date">16 November 2022</div>
+    </div>
+    <div class="events">
+      <!-- To be replaced by JS later -->
+      <div class="event">
+        <div class="title">
+          <i class="fas fa-circle"></i>
+          <h3 class="even-title">Event-1</h3>
+        </div>
+        <div class="event-time">10:00 AM - 12:00 PM</div>
+      </div>
+      <div class="event">
+        <div class="title">
+          <i class="fas fa-circle"></i>
+          <h3 class="even-title">Event-1</h3>
+        </div>
+        <div class="event-time">10:00 AM - 12:00 PM</div>
+      </div>
+      <div class="event">
+        <div class="title">
+          <i class="fas fa-circle"></i>
+          <h3 class="even-title">Event-1</h3>
+        </div>
+        <div class="event-time">10:00 AM - 12:00 PM</div>
+      </div>
+      <div class="event">
+        <div class="title">
+          <i class="fas fa-circle"></i>
+          <h3 class="even-title">Event-1</h3>
+        </div>
+        <div class="event-time">10:00 AM - 12:00 PM</div>
+      </div>
+    </div>
+    <div class="add-event-wrapper">
+      <div class="add-event-header">
+        <div class="title">Add Event</div>
+        <i class="fas fa-times close"></i>
+      </div>
+      <div class="add-event-body">
+        <div class="add-event-input">
+          <input type="text" placeholder="Event Name" class="event-name">
+        </div>
+        <div class="add-event-input">
+          <input type="text" placeholder="Event Time From" class="event-time-from">
+        </div>
+        <div class="add-event-input">
+          <input type="text" placeholder="Event Time To" class="event-time-to">
+        </div>
+      </div>
+      <div class="add-event-footer">
+        <button class="add-event-btn">add event</button>
+      </div>
+    </div>
+  </div>
+  <button class="add-event">
+    <i class="fas fa-plus"></i>
+  </button>
+</div>
+
+ <!-- Navbar -->
+ <nav class="navbar navbar-custom navbar-expand-lg fixed-top ">
+  <div class="container-fluid">
+    
+    <!-- Side Menu (Test) -->
+    <!-- Side bar -->
+    <label for="Side-Menu">
+      <!-- button for Side Menu -->
+      <input class="SideMenuToggle" type="checkbox" name="Side-Menu" id="Side-Menu">
+      <div class="sidebar-toggler">
+        <span class="top_line common"></span>
+        <span class="middle_line common"></span>
+        <span class="bottom_line common"></span>
+      </div>
+
+      <!-- The Slide -->
+      <div class="Side-Slide">
+
+        <!-- Slide Title -->
+        <h1 class="Main-Title">Menu</h1>
+
+        <div class="separator"></div>
+
+        <p class="mini-title">Main</p>
+
+        <!-- Slide Links -->
+        <ul>
+          <li><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                width="24px" fill="#000000">
+                <path
+                  d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z" />
+              </svg>Timer</a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                fill="#000000">
+                <path
+                  d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z" />
+              </svg>Profile</a></li>
+          <li><a href="/calendar.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                width="24px" fill="#000000">
+                <path
+                  d="M480-400q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240ZM200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Z" />
+              </svg>Calendar</a></li>
+          <!-- <li><button type="button" class="btn w-100 text-start rounded-0" data-bs-toggle="modal" data-bs-target="#Timer-Settings"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                fill="#000000">
+                <path
+                  d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm112-260q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Z" />
+              </svg>Settings</button></li> -->
+              <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                fill="#000000">
+                <path
+                  d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z" />
+              </svg>Themes</a></li>
+        </ul>
+
+        <div class="separator"></div>
+
+        <!-- Account -->
+        <p class="mini-title">Account</p>
+        <ul>
+          <li>
+            <a href="/about.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                fill="#000000">
+                <path
+                  d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z" />
+              </svg>About us</a>
+          </li>
+          <li>
+            <a href="/login.html"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                width="24px" fill="#000000">
+                <path
+                  d="m640-120-12-60q-12-5-22.5-10.5T584-204l-58 18-40-68 46-40q-2-14-2-26t2-26l-46-40 40-68 58 18q11-8 21.5-13.5T628-460l12-60h80l12 60q12 5 22.5 11t21.5 15l58-20 40 70-46 40q2 12 2 25t-2 25l46 40-40 68-58-18q-11 8-21.5 13.5T732-180l-12 60h-80ZM80-160v-112q0-33 17-62t47-44q51-26 115-44t141-18h14q6 0 12 2-29 72-24 143t48 135H80Zm600-80q33 0 56.5-23.5T760-320q0-33-23.5-56.5T680-400q-33 0-56.5 23.5T600-320q0 33 23.5 56.5T680-240ZM400-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Z" />
+              </svg>Account</a>
+          </li>
+          <div class="separator"></div>
+          <li>
+            ©FEE Project 2024
+          </li>
+        </ul>
+      </div>
+
+    </label>
+
+
+    <!-- Toggle button for Mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <!-- POMODORO LOGO & NAME  -->
+    <img src="./Pomofocus.png" alt="">
+    <a class="navbar-brand fw-bold" href="#Timer">PomoFocus</a>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse justify-content-end align-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- <li class="nav-item">
+          <button class="btn" data-bs-toggle="modal" data-bs-target="#Timer-Settings">Settings</button>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" href="/signup.html">Signup</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login.html">Login</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+<!-- Video background -->
+<video autoplay muted loop id="myVideo">
+  <source src="https://cdn.discordapp.com/attachments/1176196867449684020/1291556018328702986/purple-night-moon-clouds-moewalls-com_1.mp4?ex=670fb006&is=670e5e86&hm=ab4c445caa2022e6bbfaed91b9194c73196e4643dde3ef87291c3eceace73c09&">
+
+  <!-- Script -->
+   <script src="/calendar-script.js"></script>
+   <script src="/to-do-list.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(145deg, #6c3dff, #9f7cff);
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-image: url(https://images7.alphacoders.com/134/1342751.png);
+}
+.timer-mode-panel {
+    font-family: 'Poppins', sans-serif;
+    color: #8c52ff;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.timer-container {
+    background-color: #fff;
+    width: 40%;
+    min-width: 450px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 20px 0;
+    padding-bottom: 50px;
+    border-radius: 20px; /* Rounder corners */
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5), -5px -5px 15px rgba(255, 255, 255, 0.5);
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+.timer-display {
+    position: relative;
+    width: 92%;
+    background: #f0f0ff;
+    left: 4%;
+    font-family: 'Roboto Mono', monospace;
+    color: #8c52ff;
+    font-size: 48px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: inset 0 0 20px rgba(65, 5, 145, 0.25);
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.timer-buttons {
+    width: 90%;
+    margin: 60px auto 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.timer-buttons button {
+    width: 130px;
+    height: 50px;
+    background-color: #8c52ff;
+    color: #fff;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Specific button colors */
+.timer-buttons button:nth-last-child(2) {
+    background-color: #ff5733;
+}
+
+.timer-buttons button:nth-last-child(1) {
+    background-color: #ffd700;
+}
+
+/* Button hover effects */
+.timer-buttons button:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+/* Button active effects for click */
+.timer-buttons button:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    scroll-snap-type: y mandatory; /* Enable snap scrolling for full pages */
+    height:100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(145deg, #000000, #4b0082, #e6e6fa);
+    color: #ffffff;
+    animation: backgroundShift 6s infinite;
+}
+
+/* Dynamic gradient animation */
+@keyframes backgroundShift {
+    0% {
+        background: linear-gradient(145deg, #000000, #4b0082, #e6e6fa);
+    }
+    50% {
+        background: linear-gradient(145deg, #2c2c54, #a29bfe, #dcd4ff);
+    }
+    100% {
+        background: linear-gradient(145deg, #000000, #4b0082, #e6e6fa);
+    }
+}
+
+.slides-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    scroll-snap-align: start; /* Ensure alignment at the start of each slide */
+    scroll-behavior: smooth; /* Smooth scrolling between slides */
+    overflow-y: scroll; /* Allow vertical scrolling for page navigation */
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height for each slide */
+    width: 100vw; /* Full viewport width */
+    padding: 30px;
+    background: linear-gradient(135deg, #4b0082, #a29bfe, #dcd4ffb4);
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: 0.5s ease-in-out;
+    animation: slideGlow 6s infinite;
+}
+
+@keyframes slideGlow {
+    0%, 100% {
+        box-shadow: 0 8px 30px rgba(75, 0, 130, 0.6);
+    }
+    50% {
+        box-shadow: 0 8px 30px rgba(162, 155, 254, 0.6);
+    }
+}
+
+.slide h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    color: #dcd4ff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s ease-out;
+    font-weight: 600;
+}
+
+.slide p, .slide ul {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 1.8;
+    max-width: 800px;
+}
+
+.slide ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.slide ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px;
+    color: #e6e6fa;
+}
+
+.slide ul li::before {
+    content: "✔";
+    color: #dcd4ff;
+    position: absolute;
+    left: 0;
+    font-size: 18px;
+}
+
+.slide:hover {
+    background: linear-gradient(135deg, #2c2c54, #4b0082, #e6e6fa);
+    transform: scale(1.03);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.slide p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    font-weight: 300;
+}
+
+/* Add a glow effect to the current slide */
+.slide.active {
+    box-shadow: 0 8px 30px rgba(200, 162, 255, 0.7);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .slide h2 {
+        font-size: 28px;
+    }
+
+    .slide p, .slide ul {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide h2 {
+        font-size: 24px;
+    }
+
+    .slide p, .slide ul {
+        font-size: 16px;
+    }
+
+    .slide ul li::before {
+        font-size: 16px;
+    }
+}
