@@ -17,7 +17,7 @@ html{
 }
 body{
     min-height: 100vh;
-    background-image: url(pexels-anniroenkae-4175070.jpg);
+    background-image: url(./pexels-anniroenkae-4175070.jpg);
     background-size: cover;
     background-position: right;
     overflow: hidden;
