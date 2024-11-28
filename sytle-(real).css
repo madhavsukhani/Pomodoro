@@ -396,7 +396,7 @@ input:checked ~ .sidebar-toggler {
     height: 28px;
     width: 28px;
     border-radius: 50%;
-    background-image: url(/images/unchecked-41-48.png);
+    background-image: url(./images/unchecked-41-48.png);
     background-size: cover;
     background-position: center; /* Ensure proper alignment */
 }
@@ -407,7 +407,7 @@ input:checked ~ .sidebar-toggler {
 }
 
 .todo-list-container li.checked::before {
-    background-image: url(/images/circle-with-check-symbol.png);
+    background-image: url(./images/circle-with-check-symbol.png);
     color: #800fff;
 }
 .todo-list-container span{
